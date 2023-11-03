@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333030;
+}
+
+header {
+    padding: 15%;
+    margin: 7%;
+    color: transparent;
+    font-size: x-large;
+    text-align: center;
+    letter-spacing: 5px;
+
+    /*背景漸變*/
+    background: linear-gradient(to right, #333030, #fff, #333030);
+    /*剪裁掉文字以外的區域*/
+    -webkit-background-clip: text;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*執行動畫:動畫名 時長 線性 無限播放*/
+    animation: move 3s linear infinite;
+}
+
+/*定義動畫*/
+@keyframes move {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+.aboutme {
+    font-family: 標楷體;
+    font-size: large;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+.text {
+    font-family: 標楷體;
+    font-size: 30px;
+    text-align: left;
+    padding: 30px;
+    margin: 10px;
+}
+
+.card {
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 15px;
+    background-color: #fff;
+}
