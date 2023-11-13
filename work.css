@@ -1,10 +1,14 @@
 * {
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 標楷體;
 }
 
 body {
-    background-color: #333030;
+    background-color: #8b8687;
+    scroll-behavior: smooth;
 }
+
 
 header {
     padding: 15%;
@@ -15,7 +19,7 @@ header {
     letter-spacing: 5px;
 
     /*背景漸變*/
-    background: linear-gradient(to right, #333030, #fff, #333030);
+    background: linear-gradient(to right, #8b8687, #fff, #8b8687);
     /*剪裁掉文字以外的區域*/
     -webkit-background-clip: text;
     background-size: 80%;
@@ -25,7 +29,46 @@ header {
     animation: move 3s linear infinite;
 }
 
-/*定義動畫*/
+/*
+header ul {
+    float: right;
+}
+
+header ul li {
+    display: block;
+    float: left;
+    padding: 0px 10px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    text-decoration: none;
+}*/
+
+button {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.824);
+    color: rgba(0, 0, 0, 0.68);
+    border-radius: 50px;
+    box-shadow: 10px 10px 37px #666666,
+        -10px -10px 37px #ffffff;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    opacity: 1;
+}
+
+/*定義動畫 header*/
 @keyframes move {
     0% {
         background-position: -500%;
@@ -36,25 +79,85 @@ header {
     }
 }
 
-.aboutme {
-    font-family: 標楷體;
-    font-size: large;
-    text-align: left;
-    padding: 10px;
-    margin: 10px;
-}
-
-.text {
-    font-family: 標楷體;
-    font-size: 30px;
-    text-align: left;
-    padding: 30px;
-    margin: 10px;
-}
-
-.card {
-    padding: 20px;
-    margin: 20px 10px;
-    border-radius: 15px;
+section {
     background-color: #fff;
+    width: auto;
+    height: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+.photo {
+    border-radius: 50%;
+    display: block;
+    border: #fff;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.aboutme {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #333030;
+    line-height: 1.5;
+}
+
+section .text {
+    padding: 10px;
+    font-size: 40px;
+    color: #333030;
+
+}
+
+.timeline {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    transform: rotateY(0deg);
+}
+
+.page:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.page:hover {
+    transform: rotateY(180deg);
+}
+
+.page h2 {
+    font-size: 24px;
+}
+
+.page p {
+    font-size: 16px;
+}
+
+meter {
+    width: 200px;
+}
+
+span {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    color: #fff;
 }
