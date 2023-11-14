@@ -68,6 +68,7 @@ button:hover {
     opacity: 1;
 }
 
+
 /*定義動畫 header*/
 @keyframes move {
     0% {
@@ -82,12 +83,14 @@ button:hover {
 section {
     background-color: #fff;
     width: auto;
-    height: 660px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
 }
+
 
 .centered {
     text-align: center;
@@ -104,7 +107,7 @@ section {
 
 .aboutme {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 25px;
     color: #333030;
     line-height: 1.5;
 }
@@ -113,51 +116,162 @@ section .text {
     padding: 10px;
     font-size: 40px;
     color: #333030;
+}
 
+article .text {
+    padding: 20px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
 }
 
 .timeline {
     display: flex;
-    overflow-x: scroll;
-    white-space: nowrap;
-    padding: 20px;
-    box-sizing: border-box;
+    perspective: 1000px;
+    margin: 50px 0;
+    overflow: hidden;
+    justify-content: center;
 }
 
-.page {
-    width: 50%;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    border-radius: 5px;
+.card {
+    width: 200px;
+    height: 300px;
+    margin: 0 10px;
+    position: relative;
+    transform-style: preserve-3d;
     transition: transform 0.5s;
     cursor: pointer;
-    transform: rotateY(0deg);
 }
 
-.page:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-.page:hover {
+.card:hover {
     transform: rotateY(180deg);
 }
 
-.page h2 {
-    font-size: 24px;
+.card .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
+    color: rgb(72, 69, 69);
 }
 
-.page p {
-    font-size: 16px;
+.card .front {
+    background-color: #fff;
 }
 
-meter {
-    width: 200px;
+.card .back {
+    background-color: #f2f2f2;
+    transform: rotateY(180deg);
 }
 
-span {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: medium;
+.card img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 50%;
+}
+
+.card h2,
+.card p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;
+    color: #009688;
+    font-weight: bold;
+}
+
+.card a.cardbutton {
+    margin-top: 4px;
+    padding: 7px 15px;
+    font-size: 11px;
+    background-color: #646666;
     color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 20px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.separator {
+    width: 1px;
+    background-color: #ddd;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+info .p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    overflow: hidden;
+    animation: progress 2s ease-out forwards;
+}
+
+.item:nth-child(1) .progress-bar {
+    width: 70%;
+}
+
+.item:nth-child(2) .progress-bar {
+    width: 70%;
+}
+
+.item:nth-child(3) .progress-bar {
+    width: 60%;
+}
+
+.item:nth-child(4) .progress-bar {
+    width: 60%;
+}
+
+.item:nth-child(5) .progress-bar {
+    width: 100%;
+}
+
+.item:nth-child(6) .progress-bar {
+    width: 100%;
+}
+
+.item:nth-child(7) .progress-bar {
+    width: 80%;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
