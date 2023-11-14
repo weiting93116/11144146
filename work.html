@@ -7,36 +7,51 @@
     <title>index</title>
     <link rel="stylesheet" href="work.css">
     <script src="work.js"></script>
+    <script src="aside.js"></script>
 </head>
 <body>
-    <header>
+    <header id="header">
       <h1>Welcome to MyWebsite.</h1>
-      <!--<ul>
-          <li><a href="#">首頁</a></li>
-          <li><a href="#">基本資料</a></li>
-          <li><a href="#">個人經驗</a></li>
-          <li><a href="#">專業技能</a></li>
-          <li><a href="#"></a></li>
-          </ul>-->
       <div class="scroll-button"><a href="#section1"><button>▼</button></a></div>
     </header>
 
+    <div class="asidemenu" role="main">
+        <aside>
+          <ul>
+            <li><a href="#header">首頁</a></li>
+            <li><a href="#section1">基本資料</a></li>
+            <li><a href="#article">個人經驗</a></li>
+            <li><a href="#aboutskill">專業技能</a></li>
+            <li><a href="#work">工作經歷</a></li>
+          </ul>
+          <button class="asbtn">Menu</button>
+        </aside>
+      </div>
+      
 
     <section id="section1">
-      <div class="centered">
-          <img class="photo" src="123.png" width="250" height="250" alt="">
-          <h2 class="text">基本資料</h2>
-          <div class="aboutme">
-              姓名:曾瑋婷<br>
-              生日:2004/01/16<br>
-              學校:中原大學－資訊管理系<br>
-               <i>"吃飽睡好，自然沒煩惱"</i><br>
-          </div>
+        <div class="centered">
+            <img class="photo" src="123.png" width="250" height="250" alt="">
+            <div class="content">
+                <h2 class="text">基本資料</h2>
+                <div class="aboutme">
+                    <p>姓名: 曾瑋婷</p>
+                    <p>生日: 2004/01/16</p>
+                    <p>學校: 中原大學－資訊管理系</p>
+                    <p><i>"吃飽睡好，自然沒煩惱"</i></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100006450765563" class="linkbutton"><img src="facebook.png"></a>
+                    <a href="https://www.instagram.com/wewewewe_bbb/?hl=zh-tw" class="linkbutton"><img src="instagram.png"></a>
+                    <a href="https://line.me/D" class="linkbutton"><img src="line.png"></a>
+                </div>
+            </div>
         </div>
     </section>
+    
   
 
-    <article>
+    <article id="article">
       <p><h2 class="text">個人經驗</h2></p>
       <div class="timeline">
         <div class="card">
@@ -82,7 +97,7 @@
                     <li>推廣行動支付</li>
                     <li>建立城鄉島遊資料</li>
                    </ul></p>
-                <a href="https://allrightnow9.weebly.com/" class="cardbutton">more</a>
+                <a href="https://reurl.cc/dmbAMV" class="cardbutton">more</a>
             </div>
         </div>
     
@@ -103,50 +118,51 @@
         </div>
       </div>
     </article>
-      
-    <info>
-      <p><h2 class="text">專業技能</h2></p>
-      <div class="container">
-        <div class="left-column">
-            <div class="item">
-                <p>Item 1</p>
-                <div class="progress-bar eighty-percent"></div>
+    
+    <article class="aboutskill" id="aboutskill">
+        <p><b>專業技能</b></p>
+        <div class="skill">
+            <div class="column">
+                <div class="title">程式技能</div>
+                <div class="skill-item">
+                    <div class="label">Python</div>
+                    <div class="progress-bar" id="progress1"><span class="progress-value">70%</span><span></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="label">Java</div>
+                    <div class="progress-bar" id="progress2"><span class="progress-value">70%</span><span></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="label">HTML</div>
+                    <div class="progress-bar" id="progress3"><span class="progress-value">60%</span><span></span></div>
+                </div>
             </div>
-            <div class="item">
-                <p>Item 2</p>
-                <div class="progress-bar fifty-percent"></div>
-            </div>
-            <div class="item">
-                <p>Item 3</p>
-                <div class="progress-bar thirty-percent"></div>
-            </div>
-            <div class="item">
-                <p>Item 4</p>
-                <div class="progress-bar ninety-percent"></div>
+
+            <div class="separator"></div>
+            <div class="column">
+                <div class="title">文書處理</div>
+                <div class="skill-item">
+                    <div class="label">Word</div>
+                    <div class="progress-bar" id="progress5"><span class="progress-value">100%</span><span></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="label">PPT</div>
+                    <div class="progress-bar" id="progress6"><span class="progress-value">100%</span><span></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="label">Excel</div>
+                    <div class="progress-bar" id="progress7"><span class="progress-value">80%</span><span></span></div>
+                </div>
             </div>
         </div>
+    </article>
+
+    <article id="work">
+        <p>工作經驗</p>
+    </article>
+
+
         
-        <div class="separator"></div>
-        <div class="right-column">
-        <div class="item">
-            <p>Item A</p>
-            <div class="progress-bar seventy-percent"></div>
-        </div>
-        <div class="item">
-            <p>Item B</p>
-            <div class="progress-bar forty-percent"></div>
-        </div>
-        <div class="item">
-            <p>Item C</p>
-            <div class="progress-bar sixty-percent"></div>
-        </div>
-    </div>
-</div>
-    </info>
-
-        <aside>
-
-        </aside>
     </main>
 
     <footer>
