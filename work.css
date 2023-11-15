@@ -98,16 +98,17 @@ aside li {
     cursor: pointer;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: rgba(244, 236, 236, 0.806);
+    background-color: rgba(65, 63, 63, 0.806);
     border: none;
-    color: #444444;
+    color: #FFF;
     font-size: 16px;
     padding: 10px 20px;
     transition: background-color 0.4s ease-in-out, right 0.4s ease;
 }
 
 .asbtn:hover {
-    background-color: rgb(140, 132, 132);
+    background-color: rgb(191, 184, 184);
+    color: #444444;
 }
 
 .asidemenu ul {
@@ -565,8 +566,8 @@ footer .p {
 }
 
 #topBtn:hover {
-    background-color: #fcfcffc2;
-    color: #333030;
+    background-color: #333030;
+    color: #fcfcffc2;
 }
 
 #topBtn a {
