@@ -2,11 +2,13 @@
     margin: 0px;
     padding: 0px;
     font-family: 標楷體;
+
 }
 
 body {
     background: linear-gradient(#555655, #9a9e9a, #878d87, #fff);
     scroll-behavior: smooth;
+    cursor: url(https://cur.cursors-4u.net/user/use-1/use160.cur), auto
 }
 
 
@@ -96,9 +98,9 @@ aside li {
     cursor: pointer;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: rgb(190, 185, 185);
+    background-color: rgba(244, 236, 236, 0.806);
     border: none;
-    color: white;
+    color: #444444;
     font-size: 16px;
     padding: 10px 20px;
     transition: background-color 0.4s ease-in-out, right 0.4s ease;
@@ -490,7 +492,6 @@ article p {
     position: relative;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -541,13 +542,18 @@ footer {
     padding: 10px;
 }
 
+footer .p {
+    font-family: Arial;
+    font-size: larger;
+}
+
 #topBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #c4c2c2;
+    background-color: #4d4a4a;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -559,7 +565,8 @@ footer {
 }
 
 #topBtn:hover {
-    background-color: #d9d9da;
+    background-color: #fcfcffc2;
+    color: #333030;
 }
 
 #topBtn a {
