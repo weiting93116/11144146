@@ -219,9 +219,9 @@ section .text {
 }
 
 .aboutme {
-    font-size: 25px;
+    font-size: 20px;
     color: #333030;
-    line-height: 1.5;
+    line-height: 2;
     margin-top: 10px;
     text-align: center;
 }
