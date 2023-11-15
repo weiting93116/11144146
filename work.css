@@ -290,7 +290,7 @@ article .text {
 }
 
 .card h2 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .card p {
@@ -499,7 +499,6 @@ article p {
     cursor: pointer;
     transition: height 0.3s ease-in-out;
     padding-top: 40px;
-    /* Adjust the padding-top value to your preference */
 }
 
 .prework img {
@@ -540,4 +539,40 @@ footer {
     color: #FFF;
     text-align: center;
     padding: 10px;
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #c4c2c2;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    line-height: 50px;
+}
+
+#topBtn:hover {
+    background-color: #d9d9da;
+}
+
+#topBtn a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+body:hover #topBtn {
+    display: block;
+}
+
+body:not(:hover) #topBtn {
+    display: none;
 }
